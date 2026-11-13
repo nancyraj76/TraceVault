@@ -1,0 +1,91 @@
+.auth-form-heading {
+  margin-bottom: 27px;
+  text-align: center;
+}
+
+.auth-form-emblem {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(23, 45, 101, 0.12);
+  border-radius: 15px;
+  background: rgba(223, 224, 238, 0.65);
+  color: var(--tv-navy);
+}
+
+.auth-form-heading .auth-eyebrow {
+  font-size: 8px;
+}
+
+.auth-form-heading h1 {
+  margin: 13px 0 7px;
+  color: var(--tv-navy);
+  font-size: clamp(31px, 4vw, 37px);
+  font-weight: 630;
+  letter-spacing: -0.06em;
+  line-height: 1.1;
+}
+
+.auth-form-heading > p:last-child {
+  margin: 0;
+  color: rgba(23, 45, 101, 0.65);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.auth-form {
+  display: grid;
+  gap: 17px;
+}
+
+.login-form-options {
+  margin-top: -2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.auth-form-switch {
+  margin: 22px 0 0;
+  padding-top: 18px;
+  border-top: 1px solid rgba(23, 45, 101, 0.11);
+  color: rgba(23, 45, 101, 0.65);
+  font-size: 11px;
+  text-align: center;
+}
+
+.auth-form-switch a {
+  color: var(--tv-navy);
+  font-weight: 720;
+  text-decoration: none;
+}
+
+.auth-form-switch a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.auth-form-switch a:focus-visible,
+.auth-text-link:focus-visible {
+  outline: 3px solid rgba(23, 45, 101, 0.36);
+  outline-offset: 3px;
+}
+
+.auth-input[aria-invalid="true"] {
+  border-color: rgba(139, 52, 66, 0.65);
+  box-shadow: 0 0 0 3px rgba(139, 52, 66, 0.08);
+}
+
+@media (max-width: 390px) {
+  .login-form-options {
+    align-items: flex-start;
+  }
+
+  .login-form-options .auth-text-link {
+    max-width: 110px;
+    text-align: right;
+  }
+}
