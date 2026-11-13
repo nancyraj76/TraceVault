@@ -1,4 +1,4 @@
-function AuthField({ id, label, icon: Icon, children, hint, className = '' }) {
+function AuthField({ id, label, icon: Icon, children, hint, error, className = '' }) {
   return (
     <div className={`auth-field${className ? ` ${className}` : ''}`}>
       <label className="auth-field-label" htmlFor={id}>{label}</label>
@@ -6,7 +6,9 @@ function AuthField({ id, label, icon: Icon, children, hint, className = '' }) {
         {Icon && <Icon className="auth-input-icon" size={17} strokeWidth={1.8} aria-hidden="true" />}
         {children}
       </div>
-      {hint && <span className="auth-field-hint">{hint}</span>}
+      {error ? (
+        <span className="auth-field-error" id={`${id}-error`} role="alert">{error}</span>
+      ) : hint && <span className="auth-field-hint">{hint}</span>}
     </div>
   )
 }

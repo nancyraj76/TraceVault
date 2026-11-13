@@ -74,6 +74,11 @@
   outline-offset: 3px;
 }
 
+.auth-input[aria-invalid="true"] {
+  border-color: rgba(139, 52, 66, 0.65);
+  box-shadow: 0 0 0 3px rgba(139, 52, 66, 0.08);
+}
+
 @media (max-width: 390px) {
   .login-form-options {
     align-items: flex-start;
