@@ -31,13 +31,13 @@ function SiteHeader() {
           <a href="#platform" onClick={closeMenu}>Platform</a>
           <a href="#workflow" onClick={closeMenu}>How it works</a>
           <a href="#integrity" onClick={closeMenu}>Integrity</a>
-          <Link className="mobile-auth-link mobile-auth-login" to="/login" onClick={closeMenu}>Log in</Link>
-          <Link className="button button-primary mobile-auth-link mobile-auth-create" to="/signup" onClick={closeMenu}>Create Account</Link>
+          <Link className="mobile-auth-link mobile-auth-login" to="/auth" onClick={closeMenu}>Log in</Link>
+          <Link className="button button-primary mobile-auth-link mobile-auth-create" to="/auth" onClick={closeMenu}>Create Account</Link>
         </nav>
 
         <div className="header-actions">
-          <Link className="header-login" to="/login">Log in</Link>
-          <Link className="button button-primary header-action" to="/signup">Create Account</Link>
+          <Link className="header-login" to="/auth">Log in</Link>
+          <Link className="button button-primary header-action" to="/auth">Create Account</Link>
         </div>
       </div>
     </header>
