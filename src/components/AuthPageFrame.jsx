@@ -1,6 +1,7 @@
 import { ArrowLeft, LockKeyhole } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import traceVaultLogo from '../assets/icon_tracevault.png'
+import ThemeToggle from './ThemeToggle.jsx'
 import './AuthPageFrame.css'
 
 function AuthPageFrame({ children, variant = 'form' }) {
@@ -19,10 +20,13 @@ function AuthPageFrame({ children, variant = 'form' }) {
             <small>Digital evidence integrity</small>
           </span>
         </Link>
-        <Link className="auth-back-link" to="/">
-          <ArrowLeft size={15} strokeWidth={1.9} />
-          <span>Back to website</span>
-        </Link>
+        <div className="auth-header-actions">
+          <ThemeToggle />
+          <Link className="auth-back-link" to="/">
+            <ArrowLeft size={15} strokeWidth={1.9} />
+            <span>Back to website</span>
+          </Link>
+        </div>
       </header>
 
       <main className="auth-main">

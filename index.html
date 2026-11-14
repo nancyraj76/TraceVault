@@ -7,6 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#F5F4FA" />
     <meta name="description" content="TraceVault brings clarity to digital investigations with AI-powered forensics and evidence integrity." />
+    <script>
+      (() => {
+        let theme = 'light'
+        try {
+          theme = window.localStorage.getItem('tracevault-theme-preference') === 'dark' ? 'dark' : 'light'
+        } catch {
+          theme = 'light'
+        }
+        document.documentElement.dataset.theme = theme
+        document.documentElement.style.colorScheme = theme
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', theme === 'dark' ? '#111827' : '#F5F4FA')
+      })()
+    </script>
     <title>TraceVault | Digital Forensics &amp; Evidence Integrity</title>
   </head>
   <body>
