@@ -1,12 +1,97 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
   --tv-lavender: #C5C6DE;
   --tv-offwhite: #F5F4FA;
   --tv-navy: #172D65;
-  --tv-footer: #575873;
+  --tv-accent: #7B7BC4;
+  --tv-footer: #7B7BC4;
   --tv-card: #DFE0EE;
-  color-scheme: light;
+  --tv-auth-panel-bg: rgba(245, 244, 250, 0.9);
+  --tv-border: rgba(23, 45, 101, 0.12);
+  --tv-offwhite-rgb: 245, 244, 250;
+  --tv-card-rgb: 223, 224, 238;
+  --tv-footer-text-rgb: 16, 21, 47;
+  --tv-shadow-rgb: 32, 39, 83;
+  --tv-footer-text: #10152F;
+  --tv-footer-muted: rgba(var(--tv-footer-text-rgb), 0.64);
+  --tv-footer-border: rgba(var(--tv-footer-text-rgb), 0.18);
+  --tv-action-bg: #172D65;
+  --tv-action-fg: #F5F4FA;
+  --tv-action-hover: #203979;
+  --tv-action-hover-fg: #F5F4FA;
+  --tv-checkbox-accent: #172D65;
+  --tv-input-rgb: 255, 255, 255;
+  --tv-white: #FFFFFF;
+  --tv-verified-bg: #ebedf5;
+  --tv-error: #8b3442;
+  --tv-error-rgb: 139, 52, 66;
+  --tv-success: #327357;
+  --tv-accent-muted: rgba(197, 198, 222, 0.56);
+  --tv-selection-bg: rgba(23, 45, 101, 0.16);
+  --tv-toggle-bg: rgba(245, 244, 250, 0.76);
+  --tv-toggle-hover-bg: rgba(223, 224, 238, 0.72);
+  --tv-toggle-shadow: rgba(23, 45, 101, 0.1);
+  --tv-focus-ring: rgba(23, 45, 101, 0.45);
+  --tv-shadow-soft: rgba(23, 45, 101, 0.07);
+  --tv-shadow-panel: rgba(23, 45, 101, 0.1);
+  --tv-shadow-panel-soft: rgba(23, 45, 101, 0.04);
+  --tv-shadow-focus: rgba(23, 45, 101, 0.08);
+  --tv-shadow-button: rgba(23, 45, 101, 0.15);
+  --tv-shadow-button-hover: rgba(23, 45, 101, 0.2);
+  --tv-shadow-card: rgba(23, 45, 101, 0.09);
+  --tv-shadow-card-soft: rgba(23, 45, 101, 0.08);
+  --tv-shadow-menu: rgba(23, 45, 101, 0.12);
+  --tv-ink-04: rgba(23, 45, 101, 0.04);
+  --tv-ink-07: rgba(23, 45, 101, 0.07);
+  --tv-ink-08: rgba(23, 45, 101, 0.08);
+  --tv-ink-09: rgba(23, 45, 101, 0.09);
+  --tv-ink-10: rgba(23, 45, 101, 0.1);
+  --tv-ink-11: rgba(23, 45, 101, 0.11);
+  --tv-ink-12: rgba(23, 45, 101, 0.12);
+  --tv-ink-13: rgba(23, 45, 101, 0.13);
+  --tv-ink-14: rgba(23, 45, 101, 0.14);
+  --tv-ink-15: rgba(23, 45, 101, 0.15);
+  --tv-ink-16: rgba(23, 45, 101, 0.16);
+  --tv-ink-18: rgba(23, 45, 101, 0.18);
+  --tv-ink-20: rgba(23, 45, 101, 0.2);
+  --tv-ink-24: rgba(23, 45, 101, 0.24);
+  --tv-ink-27: rgba(23, 45, 101, 0.27);
+  --tv-ink-34: rgba(23, 45, 101, 0.34);
+  --tv-ink-36: rgba(23, 45, 101, 0.36);
+  --tv-ink-38: rgba(23, 45, 101, 0.38);
+  --tv-ink-40: rgba(23, 45, 101, 0.4);
+  --tv-ink-43: rgba(23, 45, 101, 0.43);
+  --tv-ink-45: rgba(23, 45, 101, 0.45);
+  --tv-ink-46: rgba(23, 45, 101, 0.46);
+  --tv-ink-47: rgba(23, 45, 101, 0.47);
+  --tv-ink-48: rgba(23, 45, 101, 0.48);
+  --tv-ink-50: rgba(23, 45, 101, 0.5);
+  --tv-ink-52: rgba(23, 45, 101, 0.52);
+  --tv-ink-53: rgba(23, 45, 101, 0.53);
+  --tv-ink-54: rgba(23, 45, 101, 0.54);
+  --tv-ink-55: rgba(23, 45, 101, 0.55);
+  --tv-ink-56: rgba(23, 45, 101, 0.56);
+  --tv-ink-57: rgba(23, 45, 101, 0.57);
+  --tv-ink-58: rgba(23, 45, 101, 0.58);
+  --tv-ink-59: rgba(23, 45, 101, 0.59);
+  --tv-ink-62: rgba(23, 45, 101, 0.62);
+  --tv-ink-63: rgba(23, 45, 101, 0.63);
+  --tv-ink-65: rgba(23, 45, 101, 0.65);
+  --tv-ink-66: rgba(23, 45, 101, 0.66);
+  --tv-ink-67: rgba(23, 45, 101, 0.67);
+  --tv-ink-68: rgba(23, 45, 101, 0.68);
+  --tv-ink-69: rgba(23, 45, 101, 0.69);
+  --tv-ink-70: rgba(23, 45, 101, 0.7);
+  --tv-ink-72: rgba(23, 45, 101, 0.72);
+  --tv-ink-73: rgba(23, 45, 101, 0.73);
+  --tv-ink-76: rgba(23, 45, 101, 0.76);
+  --tv-ink-78: rgba(23, 45, 101, 0.78);
+  --tv-ink-80: rgba(23, 45, 101, 0.8);
+  --tv-ink-83: rgba(23, 45, 101, 0.83);
+  --tv-ink-84: rgba(23, 45, 101, 0.84);
+  --tv-ink-88: rgba(23, 45, 101, 0.88);
   font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   color: var(--tv-navy);
   background: var(--tv-lavender);
@@ -14,6 +99,100 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --tv-lavender: #111827;
+  --tv-offwhite: #1C2740;
+  --tv-navy: #F5F4FA;
+  --tv-accent: #A5A6E8;
+  --tv-footer: #172033;
+  --tv-card: #1C2740;
+  --tv-auth-panel-bg: #1C2740;
+  --tv-border: #374151;
+  --tv-offwhite-rgb: 28, 39, 64;
+  --tv-card-rgb: 28, 39, 64;
+  --tv-footer-text-rgb: 245, 244, 250;
+  --tv-shadow-rgb: 0, 0, 0;
+  --tv-footer-text: #F5F4FA;
+  --tv-footer-muted: #C5C6DE;
+  --tv-footer-border: #374151;
+  --tv-action-bg: #A5A6E8;
+  --tv-action-fg: #111827;
+  --tv-action-hover: #8E90D5;
+  --tv-action-hover-fg: #111827;
+  --tv-checkbox-accent: #A5A6E8;
+  --tv-input-rgb: 17, 24, 39;
+  --tv-white: #1C2740;
+  --tv-verified-bg: #263249;
+  --tv-error: #FDA4AF;
+  --tv-error-rgb: 253, 164, 175;
+  --tv-success: #86D5A6;
+  --tv-accent-muted: rgba(165, 166, 232, 0.18);
+  --tv-selection-bg: rgba(165, 166, 232, 0.25);
+  --tv-toggle-bg: #1C2740;
+  --tv-toggle-hover-bg: #263249;
+  --tv-toggle-shadow: rgba(0, 0, 0, 0.24);
+  --tv-focus-ring: #A5A6E8;
+  --tv-shadow-soft: rgba(0, 0, 0, 0.24);
+  --tv-shadow-panel: rgba(0, 0, 0, 0.32);
+  --tv-shadow-panel-soft: rgba(0, 0, 0, 0.2);
+  --tv-shadow-focus: rgba(165, 166, 232, 0.2);
+  --tv-shadow-button: rgba(0, 0, 0, 0.22);
+  --tv-shadow-button-hover: rgba(0, 0, 0, 0.3);
+  --tv-shadow-card: rgba(0, 0, 0, 0.28);
+  --tv-shadow-card-soft: rgba(0, 0, 0, 0.22);
+  --tv-shadow-menu: rgba(0, 0, 0, 0.34);
+  --tv-ink-04: rgba(55, 65, 81, 0.24);
+  --tv-ink-07: rgba(55, 65, 81, 0.35);
+  --tv-ink-08: rgba(55, 65, 81, 0.55);
+  --tv-ink-09: #374151;
+  --tv-ink-10: #374151;
+  --tv-ink-11: #374151;
+  --tv-ink-12: #374151;
+  --tv-ink-13: #374151;
+  --tv-ink-14: #374151;
+  --tv-ink-15: #374151;
+  --tv-ink-16: #374151;
+  --tv-ink-18: #374151;
+  --tv-ink-20: #374151;
+  --tv-ink-24: #C5C6DE;
+  --tv-ink-27: #374151;
+  --tv-ink-34: #C5C6DE;
+  --tv-ink-36: #C5C6DE;
+  --tv-ink-38: #C5C6DE;
+  --tv-ink-40: #C5C6DE;
+  --tv-ink-43: #C5C6DE;
+  --tv-ink-45: #C5C6DE;
+  --tv-ink-46: #C5C6DE;
+  --tv-ink-47: #C5C6DE;
+  --tv-ink-48: #C5C6DE;
+  --tv-ink-50: #C5C6DE;
+  --tv-ink-52: #C5C6DE;
+  --tv-ink-53: #C5C6DE;
+  --tv-ink-54: #C5C6DE;
+  --tv-ink-55: #C5C6DE;
+  --tv-ink-56: #C5C6DE;
+  --tv-ink-57: #C5C6DE;
+  --tv-ink-58: #C5C6DE;
+  --tv-ink-59: #C5C6DE;
+  --tv-ink-62: #C5C6DE;
+  --tv-ink-63: #C5C6DE;
+  --tv-ink-65: #C5C6DE;
+  --tv-ink-66: #C5C6DE;
+  --tv-ink-67: #C5C6DE;
+  --tv-ink-68: #C5C6DE;
+  --tv-ink-69: #C5C6DE;
+  --tv-ink-70: #C5C6DE;
+  --tv-ink-72: #C5C6DE;
+  --tv-ink-73: #C5C6DE;
+  --tv-ink-76: #C5C6DE;
+  --tv-ink-78: #C5C6DE;
+  --tv-ink-80: #C5C6DE;
+  --tv-ink-83: #C5C6DE;
+  --tv-ink-84: #C5C6DE;
+  --tv-ink-88: #C5C6DE;
 }
 
 *,
@@ -25,6 +204,7 @@
 html {
   min-width: 320px;
   scroll-behavior: smooth;
+  background: var(--tv-lavender);
 }
 
 body {
@@ -32,6 +212,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background: var(--tv-lavender);
+  color: var(--tv-navy);
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 button,
@@ -40,10 +222,23 @@ a {
 }
 
 ::selection {
-  background: rgba(23, 45, 101, 0.16);
+  background: var(--tv-selection-bg);
   color: var(--tv-navy);
 }
 
 #root {
   min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
 }

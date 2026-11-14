@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Brand from './Brand.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 
 function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -36,6 +37,7 @@ function SiteHeader() {
         </nav>
 
         <div className="header-actions">
+          <ThemeToggle />
           <Link className="header-login" to="/auth">Log in</Link>
           <Link className="button button-primary header-action" to="/auth">Create Account</Link>
         </div>

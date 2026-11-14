@@ -18,7 +18,7 @@
   position: relative;
   z-index: 5;
   background: var(--tv-offwhite);
-  border-bottom: 1px solid rgba(23, 45, 101, 0.08);
+  border-bottom: 1px solid var(--tv-ink-08);
 }
 
 .header-inner {
@@ -76,7 +76,7 @@
 
 .primary-navigation a,
 .footer-navigation a {
-  color: rgba(23, 45, 101, 0.78);
+  color: var(--tv-ink-78);
   font-size: 13px;
   font-weight: 570;
   text-decoration: none;
@@ -110,7 +110,7 @@
 }
 
 .header-login:hover {
-  color: #203979;
+  color: var(--tv-action-hover);
 }
 
 .primary-navigation .mobile-auth-link {
@@ -123,7 +123,7 @@
   height: 42px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(23, 45, 101, 0.16);
+  border: 1px solid var(--tv-ink-16);
   border-radius: 12px;
   background: transparent;
   color: var(--tv-navy);
@@ -149,14 +149,15 @@
 }
 
 .button-primary {
-  background: var(--tv-navy);
-  color: var(--tv-offwhite);
-  box-shadow: 0 8px 18px rgba(23, 45, 101, 0.14);
+  background: var(--tv-action-bg);
+  color: var(--tv-action-fg);
+  box-shadow: 0 8px 18px var(--tv-shadow-button);
 }
 
 .button-primary:hover {
-  background: #203979;
-  box-shadow: 0 10px 22px rgba(23, 45, 101, 0.2);
+  background: var(--tv-action-hover);
+  color: var(--tv-action-hover-fg);
+  box-shadow: 0 10px 22px var(--tv-shadow-button-hover);
   transform: translateY(-1px);
 }
 
@@ -168,7 +169,7 @@
 .footer-top-link:focus-visible,
 .brand:focus-visible,
 .menu-toggle:focus-visible {
-  outline: 3px solid rgba(23, 45, 101, 0.45);
+  outline: 3px solid var(--tv-ink-45);
   outline-offset: 4px;
 }
 
@@ -189,8 +190,8 @@
 
 .site-footer {
   padding: 48px clamp(24px, 5.1vw, 76px) 20px;
-  background: #7B7BC4;
-  color: #10152F;
+  background: var(--tv-footer);
+  color: var(--tv-footer-text);
 }
 
 .footer-inner,
@@ -218,7 +219,7 @@
   flex-direction: column;
   align-items: center;
   gap: 4px;
-  color: #10152F;
+  color: var(--tv-footer-text);
 }
 
 .brand-footer .brand-mark {
@@ -233,14 +234,14 @@
 }
 
 .brand-footer .brand-name {
-  color: #10152F;
+  color: var(--tv-footer-text);
   font-size: 24px;
   font-weight: 760;
 }
 
 .footer-brand-block > p {
   margin: 3px 0 0;
-  color: #10152F;
+  color: var(--tv-footer-text);
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
@@ -254,12 +255,12 @@
 }
 
 .footer-navigation a {
-  color: #10152F;
+  color: var(--tv-footer-text);
   font-size: 11px;
 }
 
 .site-footer .footer-navigation a:hover {
-  color: #10152F;
+  color: var(--tv-footer-text);
 }
 
 .footer-top-link {
@@ -268,7 +269,7 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  color: #10152F;
+  color: var(--tv-footer-text);
   font-size: 11px;
   font-weight: 600;
   text-decoration: none;
@@ -280,28 +281,44 @@
   align-items: center;
   justify-content: space-between;
   gap: 12px 24px;
-  border-top: 1px solid rgba(16, 21, 47, 0.18);
-  color: rgba(16, 21, 47, 0.64);
+  border-top: 1px solid var(--tv-footer-border);
+  color: var(--tv-footer-muted);
   font-size: 9px;
   letter-spacing: 0.02em;
 }
 
 @media (max-width: 1060px) {
 .header-inner {
-    gap: 20px;
+    gap: 14px;
+  }
+
+  .primary-navigation {
+    gap: clamp(16px, 2vw, 24px);
   }
 }
 
 @media (max-width: 820px) {
 .header-inner {
     min-height: 72px;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
   }
 
 .menu-toggle {
     display: inline-flex;
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+.header-actions {
+    display: flex;
     grid-column: 2;
     grid-row: 1;
+    justify-self: end;
+  }
+
+  .header-actions .header-login,
+  .header-actions .header-action {
+    display: none;
   }
 
 .primary-navigation {
@@ -313,14 +330,10 @@
     display: none;
     align-items: stretch;
     gap: 0;
-    border: 1px solid rgba(23, 45, 101, 0.12);
+    border: 1px solid var(--tv-ink-12);
     border-radius: 15px;
     background: var(--tv-offwhite);
-    box-shadow: 0 14px 30px rgba(23, 45, 101, 0.12);
-  }
-
-.header-actions {
-    display: none;
+    box-shadow: 0 14px 30px var(--tv-shadow-menu);
   }
 
   .primary-navigation .mobile-auth-link {
@@ -333,19 +346,19 @@
 
   .primary-navigation .mobile-auth-login {
     margin-top: 6px;
-    border-top: 1px solid rgba(23, 45, 101, 0.12);
+    border-top: 1px solid var(--tv-ink-12);
     border-radius: 0;
   }
 
   .primary-navigation .mobile-auth-create {
     margin: 8px 4px 4px;
     justify-content: center;
-    color: var(--tv-offwhite);
+    color: var(--tv-action-fg);
   }
 
   .primary-navigation .mobile-auth-create:hover {
-    background: #203979;
-    color: var(--tv-offwhite);
+    background: var(--tv-action-hover);
+    color: var(--tv-action-hover-fg);
   }
 }
 

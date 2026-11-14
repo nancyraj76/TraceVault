@@ -8,7 +8,7 @@
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  color: rgba(23, 45, 101, 0.63);
+  color: var(--tv-ink-63);
   font-size: 9px;
   font-weight: 730;
   letter-spacing: 0.14em;
@@ -20,7 +20,7 @@
   height: 7px;
   border-radius: 50%;
   background: var(--tv-navy);
-  box-shadow: 0 0 0 4px rgba(23, 45, 101, 0.08);
+  box-shadow: 0 0 0 4px var(--tv-ink-08);
 }
 
 .auth-choice-heading h1 {
@@ -34,7 +34,7 @@
 
 .auth-choice-subtitle {
   margin: 0;
-  color: rgba(23, 45, 101, 0.7);
+  color: var(--tv-ink-70);
   font-size: 14px;
   line-height: 1.6;
 }
@@ -51,21 +51,21 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border: 1px solid rgba(23, 45, 101, 0.1);
+  border: 1px solid var(--tv-ink-10);
   border-radius: 18px;
-  background: rgba(223, 224, 238, 0.72);
+  background: rgba(var(--tv-card-rgb), 0.72);
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
 }
 
 .auth-choice-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(23, 45, 101, 0.2);
-  background: rgba(223, 224, 238, 0.92);
-  box-shadow: 0 14px 30px rgba(23, 45, 101, 0.09);
+  border-color: var(--tv-ink-20);
+  background: rgba(var(--tv-card-rgb), 0.92);
+  box-shadow: 0 14px 30px var(--tv-shadow-card);
 }
 
 .auth-choice-card-featured {
-  background: linear-gradient(145deg, rgba(223, 224, 238, 0.92), rgba(197, 198, 222, 0.56));
+  background: linear-gradient(145deg, rgba(var(--tv-card-rgb), 0.92), var(--tv-accent-muted));
 }
 
 .auth-choice-card-top {
@@ -81,14 +81,14 @@
   height: 43px;
   display: grid;
   place-items: center;
-  border: 1px solid rgba(23, 45, 101, 0.1);
+  border: 1px solid var(--tv-ink-10);
   border-radius: 13px;
-  background: rgba(245, 244, 250, 0.88);
+  background: rgba(var(--tv-offwhite-rgb), 0.88);
   color: var(--tv-navy);
 }
 
 .auth-choice-step {
-  color: rgba(23, 45, 101, 0.43);
+  color: var(--tv-ink-43);
   font-size: 8px;
   font-weight: 720;
   letter-spacing: 0.1em;
@@ -96,7 +96,7 @@
 
 .auth-choice-kicker {
   margin: 0 0 5px;
-  color: rgba(23, 45, 101, 0.59);
+  color: var(--tv-ink-59);
   font-size: 11px;
   font-weight: 620;
 }
@@ -116,14 +116,14 @@
 
 .auth-choice-card h2 a:hover {
   text-decoration: underline;
-  text-decoration-color: rgba(23, 45, 101, 0.34);
+  text-decoration-color: var(--tv-ink-34);
   text-underline-offset: 4px;
 }
 
 .auth-choice-description {
   max-width: 330px;
   margin: 9px 0 20px;
-  color: rgba(23, 45, 101, 0.68);
+  color: var(--tv-ink-68);
   font-size: 11px;
   line-height: 1.65;
 }
@@ -136,9 +136,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  border: 1px solid rgba(23, 45, 101, 0.12);
+  border: 1px solid var(--tv-ink-12);
   border-radius: 11px;
-  background: rgba(245, 244, 250, 0.75);
+  background: rgba(var(--tv-offwhite-rgb), 0.75);
   color: var(--tv-navy);
   font-size: 11px;
   font-weight: 700;
@@ -148,20 +148,20 @@
 
 .auth-choice-cta:hover {
   gap: 14px;
-  background: #fff;
-  box-shadow: 0 5px 13px rgba(23, 45, 101, 0.08);
+  background: var(--tv-white);
+  box-shadow: 0 5px 13px var(--tv-shadow-card-soft);
 }
 
 .auth-choice-footnote {
   margin: 21px 0 0;
-  color: rgba(23, 45, 101, 0.48);
+  color: var(--tv-ink-48);
   font-size: 10px;
   text-align: center;
 }
 
 .auth-choice-cta:focus-visible,
 .auth-choice-card h2 a:focus-visible {
-  outline: 3px solid rgba(23, 45, 101, 0.4);
+  outline: 3px solid var(--tv-ink-40);
   outline-offset: 3px;
 }
 
