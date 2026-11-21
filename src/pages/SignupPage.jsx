@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { ArrowRight, Check, Circle, Eye, EyeOff, LockKeyhole, Mail, ShieldCheck, UserRound } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AuthField from '../components/AuthField.jsx'
 import AuthPageFrame from '../components/AuthPageFrame.jsx'
 import {
@@ -14,6 +14,7 @@ import {
 import './SignupPage.css'
 
 function SignupPage() {
+  const navigate = useNavigate()
   const [showPasswords, setShowPasswords] = useState(false)
   const [fullName, setFullName] = useState('')
   const [email, setEmail] = useState('')
@@ -37,15 +38,17 @@ function SignupPage() {
       confirmPassword: getConfirmPasswordError(password, confirmPassword),
       terms: acceptTerms ? '' : 'Accept the Terms and Conditions to continue.',
     }
-    setFullName(trimmedName)
-    setEmail(trimmedEmail)
-    setTouched({ fullName: true, email: true, password: true, confirmPassword: true, terms: true })
-    setErrors(nextErrors)
     setFeedback('')
 
-    if (Object.values(nextErrors).some(Boolean)) return
+    if (Object.values(nextErrors).some(Boolean)) {
+      setFullName(trimmedName)
+      setEmail(trimmedEmail)
+      setTouched({ fullName: true, email: true, password: true, confirmPassword: true, terms: true })
+      setErrors(nextErrors)
+      return
+    }
 
-    setFeedback('Demo only: your details passed validation. Account creation is not connected yet.')
+    navigate('/dashboard')
   }
 
   function updateField(name, value, validate) {

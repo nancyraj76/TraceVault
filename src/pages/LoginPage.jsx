@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { ArrowRight, Eye, EyeOff, LockKeyhole, Mail, ShieldCheck } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import AuthField from '../components/AuthField.jsx'
 import AuthPageFrame from '../components/AuthPageFrame.jsx'
 import { getEmailError, getLoginPasswordError, normalizeEmail } from '../lib/authValidation.js'
 import './LoginPage.css'
 
 function LoginPage() {
+  const navigate = useNavigate()
   const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -22,14 +23,16 @@ function LoginPage() {
       email: getEmailError(trimmedEmail),
       password: getLoginPasswordError(password),
     }
-    setEmail(trimmedEmail)
-    setTouched({ email: true, password: true })
-    setErrors(nextErrors)
     setFeedback('')
 
-    if (Object.values(nextErrors).some(Boolean)) return
+    if (Object.values(nextErrors).some(Boolean)) {
+      setEmail(trimmedEmail)
+      setTouched({ email: true, password: true })
+      setErrors(nextErrors)
+      return
+    }
 
-    setFeedback('Demo only: your details passed validation. Account sign-in is not connected yet.')
+    navigate('/dashboard')
   }
 
   function updateEmail(value) {
